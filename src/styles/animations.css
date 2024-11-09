@@ -1,0 +1,34 @@
+@keyframes holo {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+@keyframes float-1 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(3px, -3px); } }
+@keyframes float-2 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-3px, 3px); } }
+@keyframes float-3 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(3px, 3px); } }
+@keyframes float-4 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-3px, -3px); } }
+@keyframes float-5 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(2px, -2px); } }
+@keyframes float-6 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-2px, 2px); } }
+
+.animate-holo {
+  animation: holo 3s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spin 8s linear infinite reverse;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-float-1 { animation: float-1 3s ease-in-out infinite; }
+.animate-float-2 { animation: float-2 3s ease-in-out infinite; }
+.animate-float-3 { animation: float-3 3s ease-in-out infinite; }
+.animate-float-4 { animation: float-4 3s ease-in-out infinite; }
+.animate-float-5 { animation: float-5 3s ease-in-out infinite; }
+.animate-float-6 { animation: float-6 3s ease-in-out infinite; }

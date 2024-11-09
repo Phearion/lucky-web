@@ -1,0 +1,38 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change to your main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '21'  # Ensure you use the correct Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the project
+      run: npm run build
+
+    - name: Add CNAME file
+      run: echo 'maya-design.cloud' > ./dist/CNAME
+
+    - name: List contents of dist directory
+      run: ls -al ./dist
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GHPAGES_TOKEN }}
+        publish_dir: ./dist
+        cname: maya-design.cloud  # If you have a custom domain
