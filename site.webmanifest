@@ -1,0 +1,16 @@
+{
+  "name": "Lucky-chan - School Archive Assistant",
+  "short_name": "Lucky-chan",
+  "description": "Access your school resources effortlessly with Lucky-chan Discord bot",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E1B4B",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
