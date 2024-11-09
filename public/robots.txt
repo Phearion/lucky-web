@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://lucky.phearion.fr/sitemap.xml
+
+# Prevent caching of assets
+Disallow: /assets/
+Disallow: /*.js$
+Disallow: /*.css$
